@@ -1,0 +1,53 @@
+<form script="metro.js">
+  <label>Metro commentaires</label>
+  <fieldset submitButton="false" autoRun="false">
+    <input type="dropdown" token="tapp1">
+      <label>APP1</label>
+      <fieldForLabel>sourcetype</fieldForLabel>
+      <fieldForValue>sourcetype</fieldForValue>
+      <search>
+        <query>index=metro | top 4 sourcetype</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+    <input type="dropdown" token="tapp2">
+      <label>APP2</label>
+      <fieldForLabel>sourcetype</fieldForLabel>
+      <fieldForValue>sourcetype</fieldForValue>
+      <search>
+        <query>index=metro | top 4 sourcetype</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Add comment</title>
+      <html>
+          <div id="formFields">
+            <input type="input" id="key"/>
+            <input type="input" id="comment"/>
+          </div>
+          <div id="saveButton"/>
+        </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Current KVStore Status</title>
+      <html>
+        <div id="refreshButton"/>
+        <div id="results"/>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <div id="mytable"/>
+      </html>
+    </panel>
+  </row>
+</form>
